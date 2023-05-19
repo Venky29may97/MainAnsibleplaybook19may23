@@ -7,10 +7,10 @@
     apt:
       name: apache2
       state: present
-    where: ansible_os_family =="Debian"
+    when: ansible_os_family =="Debian"
 
-  - name: i want to start webserver or ubuntu nodes
+  - name: i want to start webserver on ubuntu nodes
     service:
        name: apache2
        state: started
-    where: ansible_os_family =="Debian"
+    when: ansible_os_family =="Debian"
