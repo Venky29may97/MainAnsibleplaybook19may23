@@ -4,10 +4,11 @@
   tasks:
   - name: i want to create mytest file
     file:
-    path:  /home/ubuntu/mytestfile
-    state: touch
+      path: /home/ubuntu/mytestfile
+      state: touch
 
   - name: i want to install webserver
     apt:
       name: apache2
       state: present
+    
